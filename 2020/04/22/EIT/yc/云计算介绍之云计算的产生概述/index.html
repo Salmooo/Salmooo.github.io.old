@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EIT/yc/云计算介绍之云计算的产生概述 | Salmooo</title><meta name="description" content="云计算介绍之云计算的产生概述### 博客目录  * [1.云计算的出现](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522"><meta name="author" content="Salmone"><meta name="copyright" content="Salmone"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="EIT/yc/云计算介绍之云计算的产生概述"><meta name="twitter:description" content="云计算介绍之云计算的产生概述### 博客目录  * [1.云计算的出现](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522"><meta name="twitter:image" content="https://salmooo.github.io/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="EIT/yc/云计算介绍之云计算的产生概述"><meta property="og:url" content="https://salmooo.github.io/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BB%8B%E7%BB%8D%E4%B9%8B%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E4%BA%A7%E7%94%9F%E6%A6%82%E8%BF%B0/"><meta property="og:site_name" content="Salmooo"><meta property="og:description" content="云计算介绍之云计算的产生概述### 博客目录  * [1.云计算的出现](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522"><meta property="og:image" content="https://salmooo.github.io/img/post.jpg"><meta property="article:published_time" content="2020-04-22T13:37:20.460Z"><meta property="article:modified_time" content="2020-04-22T14:53:40.562Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://salmooo.github.io/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BB%8B%E7%BB%8D%E4%B9%8B%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E4%BA%A7%E7%94%9F%E6%A6%82%E8%BF%B0/"><link rel="next" title="EIT/yc/云计算未来的发展趋势" href="https://salmooo.github.io/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Salmooo" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#云计算介绍之云计算的产生概述"><span class="toc-number">1.</span> <span class="toc-text">云计算介绍之云计算的产生概述</span></a></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Salmooo</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">EIT/yc/云计算介绍之云计算的产生概述</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2020-04-22 13:37:20"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2020-04-22</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-22 14:53:40"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-22</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1 id="云计算介绍之云计算的产生概述"><a href="#云计算介绍之云计算的产生概述" class="headerlink" title="云计算介绍之云计算的产生概述"></a>云计算介绍之云计算的产生概述</h1><pre><code>### 博客目录
+
+* [1.云计算的出现](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#1_3)
+* [2.云计算虚拟化概述](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#2_45)
+
+* [2.1 什么是虚拟化](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#21__47)
+* [2.2 虚拟化的方式](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#22__52)
+* [2.3 常见的虚拟化类型](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#23__59)
+
+* [（1）服务器虚拟化](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#1_61)
+* [（2）网络虚拟化](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#2_65)
+* [（3）存储虚拟化](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#3_74)
+* [2.4 什么是云计算](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#24__82)
+* [3.SANGFOR CLOUD解决方案](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#3SANGFOR_CLOUD_103)
+
+* [3.1 企业云解决方案](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#31__105)
+* [3.2 桌面云解决方案](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#32__111)
+* [3.3 应用交付解决方案](https://blog.csdn.net/csdn10086110/article/details/91413055?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522158746995019724835835458%2522%252C%2522scm%2522%253A%252220140713.130102334.app%255Fblog.%2522%257D&amp;request_id=158746995019724835835458&amp;biz_id=0&amp;utm_source=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v25-9#33__126)
+
+
+
+## 1.云计算的出现
+
+**造成IT服务困境的原因**
+
+&gt; 竖井式IT架构
+&gt; 业务扩容困难
+&gt; 业务部署缓慢
+&gt; 管理策略分散
+&gt; 运维成本上升
+
+为了满足企业业务快速发展的需求，IT系统应该具备如下特点
+
+&gt; 新IT：由互联网思维催生的数据中心深层次变革
+&gt; 应该具有以下特点：
+&gt; 数据可靠
+&gt; 资源灵活
+&gt; 节约成本
+&gt; 快速上线
+&gt; 统一管理
+&gt; 高使用率
+
+**新IT的核心价值**
+
+&gt; 基础设施 平台化
+&gt; • 硬件资源虚拟化管理
+&gt; • 虚拟资源池化管理
+&gt; • 软件定义数据中心
+
+&gt; 运维管理 集约化
+&gt; •虚拟化整合实现效益最大化
+&gt; • 资源自动弹性技术提升业务效率
+&gt; • 大规模集群HA技术降低运营成本
+
+&gt; 业务交付 服务化
+&gt; • 流程式的敏捷业务交付
+&gt; • 业务部门以内部结算方式消费IT
+&gt; • IT部门由成本中心向利润中心转变
+
+**云计算虚拟化—新IT的基础**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611090552608.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+## 2.云计算虚拟化概述
+
+### 2.1 什么是虚拟化
+
+&gt; &lt;mark&gt;1.虚拟化的对象是各种各样的资源&lt;br&gt;
+&gt; 2.经过虚拟化后的逻辑资源对用户隐藏了不必要的细 节&lt;br&gt;
+&gt; 3.用户可以在虚拟环境中 实现其真实环境的部分或全部功能&lt;/mark&gt;
+
+### 2.2 虚拟化的方式
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611091304305.)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061109153617.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+**主流虚拟化服务商**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611091605646.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+### 2.3 常见的虚拟化类型
+
+#### （1）服务器虚拟化
+
+&gt; 一台服务器在逻辑上虚拟出多台服务器，且相互隔离独立运行
+&gt; ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611091829395.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+#### （2）网络虚拟化
+
+&gt; &lt;mark&gt;网络设备N:1虚拟化技术IRF&lt;/mark&gt;
+&gt; 可以实现将多台物理网络设备虚拟成一台网络设备
+
+&gt; &lt;mark&gt;网络设备1:N虚拟化技术MDC&lt;/mark&gt;
+&gt; 可以实现在单台网络设备上虚拟多台逻辑设备
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611091854502.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+#### （3）存储虚拟化
+
+1.  基于主机的存储虚拟化
+
+2.  基于存储设备的存储虚拟化
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611092131654.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+3.  基于网络的存储虚拟化
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061109223692.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+
+### 2.4 什么是云计算
+
+&gt; 云计算：通过网络将共享资源以服务的方式按需提供给用户的一种计算方式
+
+**五大特征**
+
+&gt; 自助服务
+&gt; 网络分发
+&gt; 资源池化
+&gt; 灵活调度
+&gt; 服务可衡量
+
+**三种服务**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019061109490863.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+**四个模型**
+
+&gt; 公有云
+&gt; 私有云
+&gt; 混合云
+&gt; 行业云
+&gt; ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611095021965.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+## 3.SANGFOR CLOUD解决方案
+
+### 3.1 企业云解决方案
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611095143445.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+**深信服 超融合架构**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611095212605.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+### 3.2 桌面云解决方案
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611095615605.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+&gt; 将原先PC机上的操作系统、应用程序和数据全部集中到数据中心，只要网络可达，就可以通过瘦终端或其他设备访问位于服务器上的个人桌面及各种应用，并且用户体验和我们使用传统 PC是一样的。
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611095855413.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 终端设备：瘦终端、普通PC、笔记本、智能终端（如手机、IPAD）</span><br><span class="line">2. 网络：局域网、广域网，会通过专有协议来传输图像和指令（如SRAP）</span><br><span class="line">3. 软件：服务器虚拟化、存储虚拟化、虚拟桌面控制器</span><br><span class="line">4. 服务器和存储:其中存储可以用虚拟存储，也可以用独立存储</span><br></pre></td></tr></table></figure>
+
+* 1
+* 2
+* 3
+* 4
+
+
+### 3.3 应用交付解决方案
+
+&gt; 应用交付（Application Deliver，简称AD）的核心即负载均衡
+&gt; ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611100417582.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)
+
+&gt; 应用交付解决方案与传统的负载均衡相比，在强调稳定性的基础上，增加了智能和优化方面的功能特性，以帮助用户应对来自于复杂应用环境中部署并交付服务的挑战
+&gt; ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190611100343223.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG4xMDA4NjExMA==,size_16,color_FFFFFF,t_70)</code></pre></article>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Salmone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://salmooo.github.io/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BB%8B%E7%BB%8D%E4%B9%8B%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E4%BA%A7%E7%94%9F%E6%A6%82%E8%BF%B0/">https://salmooo.github.io/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BB%8B%E7%BB%8D%E4%B9%8B%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E4%BA%A7%E7%94%9F%E6%A6%82%E8%BF%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/04/22/EIT/yc/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF/"><img class="next_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">EIT/yc/云计算未来的发展趋势</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Salmone</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
